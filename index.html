@@ -3,8 +3,8 @@
 	<head>
 		<link rel = 'stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 		<link rel = 'shortcut icon' href = 'favicon.ico' type = 'image/x-icon'>
-		<script type = 'text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 		<script type = "text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script type = 'text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			#social {
@@ -22,6 +22,11 @@
 				margin-right:auto;
 				padding:10px;
 			}
+
+			#display_div {
+				font-size:3em;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -37,17 +42,42 @@
 			</div><!-- End of first row -->
 		</div><!-- End of container -->
 
+		<!-- Social Icons in the following container -->
 		<div class = 'container-fluid'>
 			<div class = 'row-fluid'>
 				<div class = 'col-md-4'></div>
 				<div class = 'col-md-4' id = 'social'>
-					<a href = 'https://www.facebook.com/anealK'><img class = 'social-icon' src = 'nucleo-social-icons/svg/social-1_logo-facebook.svg' /></a>
-					<a href = 'https://twitter.com/AnealKhimani'><img class = 'social-icon' src = 'nucleo-social-icons/svg/social-1_logo-twitter.svg' /></a>
-					<a href = 'https://www.linkedin.com/in/anealkhimani'><img class = 'social-icon' src = 'nucleo-social-icons/svg/social-1_logo-linkedin.svg' /></a>
+					<a href = 'https://www.facebook.com/anealK'><img class = 'social-icon' id = 'fb_icon' src = 'nucleo-social-icons/svg/social-1_logo-facebook.svg' /></a>
+					<a href = 'https://twitter.com/AnealKhimani'><img class = 'social-icon' id = 'tw_icon' src = 'nucleo-social-icons/svg/social-1_logo-twitter.svg' /></a>
+					<a href = 'https://www.linkedin.com/in/anealkhimani'><img class = 'social-icon' id = 'li_icon' src = 'nucleo-social-icons/svg/social-1_logo-linkedin.svg' /></a>
 				</div>
 				<div class = 'col-md-4'></div>
 			</div>
-
 		</div>
+		<!-- End of Social Icons -->
+
+		<!-- display div -->
+		<div class = 'container-fluid'>
+			<div class = 'row-fluid'>
+				<div class = 'col-md-4'></div>
+				<div class = 'col-md-4' id = 'display_div'></div>
+				<div class = 'col-md-4'></div>
+			</div>
+		</div>
+
 	</body>
+<script type = 'text/javascript'>
+	$("document").ready(function() {
+		
+		// Handle hovers on social icons
+		$("#fb_icon").hover(function() {$("#display_div").html("Facebook")},function() {$("#display_div").html("")});
+
+		$("#tw_icon").hover(function() {$("#display_div").html("Twitter")}, function() {$("#display_div").html("")});
+
+		$("#li_icon").hover(function() {$("#display_div").html("LinkedIn")}, function() {$("#display_div").html("")});
+
+
+
+	});
+</script>
 </html>
