@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type = "text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<title>InfinityTrump</title>
+		<style>
+			img {
+				height:200px;
+			}
+			body {
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+
+	</body>
+</html>
+<script type = 'text/javascript'>
+	$("document").ready(function() {
+		// Create variables
+		var TrumpCount = 0;
+		var TrumpTimer = setInterval(makeTrump, 50);
+		var TrumpImgs = ["trump1trans.png","trump2trans.png","trump3trans.png","trump4trans.png","trump5trans.png","trump6trans.png"];
+
+		function grabRandomTrump() {
+			return TrumpImgs[Math.floor(Math.random()*TrumpImgs.length)];
+		}
+
+		function randomX() {
+			return Math.floor((Math.random() * window.innerWidth) +1);
+		}
+
+		function randomY() {
+			return Math.floor((Math.random() * window.innerHeight) +1);
+		}
+
+		function randomDegrees() {
+			return Math.floor((Math.random() * 365) + 1);
+		}
+
+
+		function makeTrump() {
+			// Grab a random image
+			var img = grabRandomTrump();
+
+			// Grab random coodinates for new image
+			var top = randomY();
+			var left = randomX();
+			var deg = randomDegrees();
+			
+			// Append it to the body
+			$("body").append("<img src = '" + img + "' />");
+			$("img").last().css({
+				"position": "absolute",
+				"top": top + "px",
+				"left": left + "px",
+				"transform" : "rotate(" + deg + "deg)"
+			});
+			
+		}
+
+
+
+	});
+</script>
