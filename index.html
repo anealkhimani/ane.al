@@ -7,6 +7,10 @@
 		<script type = 'text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
+			.img-responsive {
+				margin: 0 auto;
+			}
+
 			#social {
 				text-align: center;
 			}
@@ -31,14 +35,9 @@
 	</head>
 	<body>
 		<div id = 'wrap' class = 'container-fluid'>
-			
-			<div class = 'row-fluid'>
-				<div class = 'col-md-4'></div>
-				<div class = 'col-md-4'>
-					<!-- Image goes here -->
-					<img src = 'avatar.jpg' class = 'img-circle img-responsive' id = 'avatar'/>
-				</div>
-				<div class = 'col-md-4'></div>
+			<div class = 'row-fluid' id = "image_row">
+				<!-- Image goes here -->
+				<img src = 'avatar.jpg' class = 'img-circle img-responsive' id = 'avatar'/>
 			</div><!-- End of first row -->
 		</div><!-- End of container -->
 
