@@ -1,0 +1,17 @@
+#main_contain {
+  margin-top:200px;
+}
+
+#song_title {
+  width:100%;
+  margin-bottom:20px;
+}
+
+.new_title {
+
+  font-size:1.1em;
+}
+
+.panel-footer{
+  text-align:center;
+}
