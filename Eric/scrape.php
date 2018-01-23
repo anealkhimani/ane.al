@@ -8,6 +8,6 @@
   $value = $element->nodeValue;
   $exploded = explode(" ", $value);
 
-  echo $exploded[0];
+  echo "<ul><li>" . $exploded[0] . "</ul><li>";
 
 ?>
