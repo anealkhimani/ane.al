@@ -7,7 +7,9 @@
   $element = $dom->getElementById('pgNameVal');
   $value = $element->nodeValue;
   $exploded = explode(" ", $value);
-
+  echo "<html>";
+  echo "<body>";
   echo "<ul><li>" . $exploded[0] . "</li></ul>";
-
+  echo "</body>";
+  echo "</html>";
 ?>
